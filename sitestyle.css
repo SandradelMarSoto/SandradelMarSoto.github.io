@@ -1,0 +1,182 @@
+body{
+  margin: 0; padding: 0;
+}
+
+.header {
+  padding: 8px;
+  text-align: center;
+  background: #0994EE;  
+  opacity: 0.85;
+  color: white;
+  font-family: 'Noto Sans';
+  font-size: 30px;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #FFF3A5;
+  opacity: 0.85;
+  color: black;
+  font-family: 'Noto Sans';
+  text-align: center;
+}
+
+.instruction {
+  background: #414BB2;
+  opacity: 0.85;
+}
+
+.instruction p{
+  color: white;
+  font-family: 'Noto Sans';
+  font-size: 20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+}
+ 
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#c1 *{
+  margin-left: 60px;
+}
+#c1 p{
+    margin: 20px 0px 5px 60px;
+    font-family: 'Roboto Mono';
+}
+#c1 input{
+    width: 300px;
+    height: 50px;
+}
+button{
+    width: 150px;
+    height: 65px;
+    color: white;
+    font-family: 'Roboto Mono';
+    border: none;
+    border-radius: 15px;
+}
+
+#c2 div{
+  display: none;
+}
+#c2 p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 80%;
+    color: #414BB2;
+    font-family: 'Roboto Mono';
+    background: rgba(18, 205, 212, .4)   
+}
+
+.step{
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.result{
+  text-align: center; 
+  padding-bottom: 4px;
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+  #c1 *{
+    margin-left: 20px;
+  }
+
+  #c1 p{
+      margin: 20px 0px 5px 20px;
+      font-family: 'Roboto Mono';
+      font-size: 12px;
+  }
+  #c1 input{
+      width: 80%;
+      height: 40px;
+      font-size: 10px;
+  }
+button{
+      width: 33%;
+      height: 45px;
+      color: white;
+      font-family: 'Roboto Mono';
+      border: none;
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 0px 8% 50px 10%;
+      
+  }
+
+  
+  #c2 *{
+    margin-left: 20px;
+  }
+
+  #c2 p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 80%;
+    color: #414BB2;
+    font-family: 'Roboto Mono';
+    background: rgba(18, 205, 212, .4)   
+}
+
+  .step{
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  .result{
+    text-align: center; 
+    padding-top: 3px;
+    padding-bottom: 5px;
+    width: 80%;
+  }
+
+  .header img{
+    display: none;
+  }
+
+  .div-instruction{
+    height: 0px;
+    margin: 0px;
+  }
+
+  .instruction p{
+    font-size: 10px;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #FFF3A5;
+    opacity: 0.85;
+    color: black;
+    font-family: 'Noto Sans';
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
