@@ -23,6 +23,9 @@ body{
   color: black;
   font-family: 'Noto Sans';
   text-align: center;
+  font-weight: lighter;
+  padding-top: 4px;
+  height: 50px;
 }
 
 .instruction {
@@ -50,18 +53,20 @@ body{
   content: "";
   display: table;
   clear: both;
+  width: 50%;
 }
 
 #c1 *{
-  margin-left: 60px;
+  margin-left: 35%;
 }
 #c1 p{
-    margin: 20px 0px 5px 60px;
+    margin: 20px 0px 5px 0px;
     font-family: 'Roboto Mono';
 }
 #c1 input{
     width: 300px;
     height: 50px;
+    margin-left:0px !important;
 }
 button{
     width: 150px;
@@ -71,8 +76,7 @@ button{
     border: none;
     border-radius: 15px;
 }
-
-#c2 div{
+#c2 .formula{
   display: none;
 }
 #c2 p{
@@ -82,6 +86,15 @@ button{
     color: #414BB2;
     font-family: 'Roboto Mono';
     background: rgba(18, 205, 212, .4)   
+}
+
+.result:hover {
+  background: rgba(18, 205, 212, 1) !important;
+  font-size: 18px;
+  padding: 5px 0px !important;;
+  margin: 2px 0px !important;;
+  cursor: zoom-in;
+
 }
 
 .step{
@@ -95,8 +108,13 @@ button{
 
 }
 
+.column_height{
+  height: 300px;
+}
+
+
 /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .column {
     width: 100%;
   }
@@ -106,12 +124,13 @@ button{
   }
 
   #c1 p{
-      margin: 20px 0px 5px 20px;
+      margin: 20px 0px 5px 0px;
       font-family: 'Roboto Mono';
       font-size: 12px;
   }
   #c1 input{
       width: 80%;
+      margin-left:0px !important;
       height: 40px;
       font-size: 10px;
   }
@@ -127,6 +146,9 @@ button{
       
   }
 
+  #c2{
+    margin-bottom: 40px;
+  }
   
   #c2 *{
     margin-left: 20px;
@@ -164,6 +186,7 @@ button{
 
   .instruction p{
     font-size: 10px;
+    width: 90%;
   }
 
   .footer {
@@ -178,5 +201,66 @@ button{
     text-align: center;
     font-size: 8px;
   }
+
+  .column_height{
+    margin-bottom: 90px;
+  }
+} /* termina el responsive para celular
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 1500px) {
+  .footer{
+    font-size: 17px;
+  }
+
+  #c1 *{
+    margin-left: 100px;
+  }
+
+  #c1 p{
+    margin: 20px 0px 5px 0px;
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+  }
+  .form-item {
+    font-size: 18px;
+  }
+}
+
+
+@-webkit-keyframes showTooltip {<!--from w ww  .ja  v a  2  s.c  o  m-->
+  from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes showTooltip {
+  from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes showTooltip {
+  from {opacity: 0;}
+    to {opacity: 1;}
+}
+.form-item {
+  position: relative;
+}
+.message-error:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 30%;
+  display: none;
+  padding: 1em 2em;
+  color: white;
+}
+
+.message-error:hover:after {
+  display: block;
+  -webkit-animation: showTooltip 0.35s ease-in-out;
+  -moz-animation: showTooltip 0.35s ease-in-out;
+  animation: showTooltip 0.35s ease-in-out;
+}
+.message-error:after {
+  background-color: #BFB5B5;
 }
 
