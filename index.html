@@ -24,7 +24,7 @@ function emptyInputs(){
 }
 
 function evalua1(){
-	var text = "log("+ $("#monto").val()+"/"+ $("#capital").val()+") =n log( 1 + "+ ($("#interes").val()/100) + ")"; 
+	var text = "log("+ $("#monto").val()+"/"+ $("#capital").val()+") = n log( 1 + "+ ($("#interes").val()/100) + ")"; 
 	$("#resultP3").text(text);
 	var evalP3 = Math.log10($("#monto").val()/$("#capital").val()) + " = n ("+ Math.log10( 1+ ($("#interes").val()/100)) + ")";
 	$("#evalP3").text(evalP3);
@@ -124,7 +124,9 @@ $(document).ready(function(){
   });
 
   $("#btn-main button").click(function(){
+  	if (!emptyInputs()){
   	$(".instruction").hide();
+  	}
   });
 
 });
@@ -163,7 +165,7 @@ $(document).ready(function(){
 		<button id="btn-result"type="button" style="background-color: #FF8300">Ver <br />resultados</button>
 		<button id="btn-pasos" type="button" style="background-color: #4EAE3E; margin-left: 1%;">Ver <br />pasos</button>
 	</div>
-	<button id="btn-nuevo"type="button" style="background-color: #F24726; display: none; right: 0;">Limpiar</button>
+	<button id="btn-nuevo"type="button" style="background-color: #F24726; display: none; width: 300px;">Limpiar</button>
 	
 </div>
 <!--Columna derecha -->
@@ -217,7 +219,7 @@ $(document).ready(function(){
   </div>
 
 <div class="footer">
-	<p><span style="font-weight: bold;">¿Qué es el interés compuesto?</span> Es aquel que se va sumando al capital inicial y sobre el que se van generando nuevos intereses.
+	<p><span style="font-weight: bold;">¿Qué es el interés compuesto?</span> Es aquel que se va sumando al capital inicial y sobre el que se van generando nuevos intereses. <br>
 	El dinero, en este caso, tiene un efecto multiplicador porque los intereses producen nuevos intereses.</p>
 </div>
 

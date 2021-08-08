@@ -197,10 +197,14 @@ button{
     background: #FFF3A5;
     opacity: 0.85;
     color: black;
-    font-family: 'Noto Sans';
     text-align: center;
+  }
+
+  .footer p{
+    font-family: 'Noto Sans';
     font-size: 8px;
   }
+
 
   .column_height{
     margin-bottom: 90px;
@@ -208,14 +212,13 @@ button{
 } /* termina el responsive para celular
 
 
+//pantallas grandes
 /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
 @media screen and (min-width: 1500px) {
   .footer{
     font-size: 17px;
-  }
-
-  #c1 *{
-    margin-left: 100px;
+    font-family: 'Noto Sans';
+    padding-bottom: 10px;
   }
 
   #c1 p{
